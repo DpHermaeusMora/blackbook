@@ -1,0 +1,66 @@
+@import "katex/dist/katex.min.css";
+@import "video.js/dist/video-js.css";
+@import "prismjs/themes/prism-tomorrow.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.prose pre {
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.prose video {
+  margin: 0;
+}
+
+.prose blockquote p {
+  margin: 0;
+}
+
+.prose th,
+td {
+  border: 1px solid #a2a9b1;
+  overflow: hidden;
+}
+
+.vjs-box__horizontal {
+  width: 640px;
+  height: 360px;
+
+  @media (max-width: 660px) and (min-width: 500px) {
+    width: 480px;
+    height: 320px;
+  }
+
+  @media (min-width: 340px) and (max-width: 499px) {
+    width: 320px;
+    height: 200px;
+  }
+
+  @media (max-width: 339px) {
+    width: 200px;
+    height: 120px;
+  }
+}
+
+.vjs-box__horizontal > div {
+  width: 100%;
+  height: 100%;
+}
+
+.vjs-box__vertical {
+  width: 360px;
+  height: 640px;
+
+  @media (max-width: 400px) {
+    width: 200px;
+    height: 320px;
+  }
+}
+
+.vjs-box__vertical > div {
+  width: 100%;
+  height: 100%;
+}
