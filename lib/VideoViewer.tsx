@@ -107,6 +107,8 @@ export default function VideoViewer({
     </div>
   ) : metadata ? (
     <div
+      data-vjs-player
+      ref={videoRef}
       className={
         metadata
           ? metadata.width >= metadata.height
@@ -114,9 +116,7 @@ export default function VideoViewer({
             : `vjs-box__vertical`
           : `vjs-box__horizontal`
       }
-    >
-      <div data-vjs-player ref={videoRef} />
-    </div>
+    />
   ) : (
     <div className="vjs-box__horizontal bg-black flex justify-center items-center">
       <span className="prose text-white font-bold text-xl mr-2">
