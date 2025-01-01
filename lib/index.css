@@ -6,6 +6,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+.prose ul.contains-task-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.prose li.task-list-item {
+  margin: 0;
+  padding: 0;
+}
+
+.prose li.task-list-item input[type="checkbox"] {
+  width: 0px;
+  height: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 22px;
+}
+
+.prose li.task-list-item input[type="checkbox"]:checked::before {
+  display: inline-block;
+  content: "✅";
+}
+
+.prose li.task-list-item input[type="checkbox"]:not(:checked)::before {
+  display: inline-block;
+  content: "☑️";
+}
+
+.prose table {
+  border: 1px solid #a2a9b1;
+  table-layout: fixed;
+  width: 200px;
+} */
+
 .prose pre {
   overflow-x: auto;
   overflow-y: visible;
@@ -21,7 +57,9 @@
 
 .prose th,
 td {
+  padding: 0.2em 0.4em !important;
   border: 1px solid #a2a9b1;
+  width: 100px;
   overflow: hidden;
 }
 
