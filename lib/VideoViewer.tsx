@@ -104,7 +104,9 @@ export default function VideoViewer({
       {metadata ? (
         <div
           className={
-            metadata.width >= metadata.height
+            options.fill
+              ? "w-full h-full"
+              : metadata.width >= metadata.height
               ? `vjs-box__horizontal`
               : `vjs-box__vertical`
           }
