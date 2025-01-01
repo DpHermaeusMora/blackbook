@@ -102,7 +102,11 @@ export default function VideoViewer({
   }, [playerRef, metadata]);
 
   return (
-    <div className={`pt-8 pb-8 ${containerClassName || ""}`}>
+    <div
+      className={`pt-8 pb-8 ${containerClassName || ""} ${
+        options.fill ? "w-full h-full" : ""
+      }`}
+    >
       {metadata ? (
         <div
           className={
