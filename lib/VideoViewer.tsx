@@ -10,7 +10,7 @@ export interface Metadata {
 
 export interface Props {
   containerClassName?: string;
-  metadata: ((src: string) => Promise<Metadata>) | Metadata;
+  metadata?: ((src: string) => Promise<Metadata>) | Metadata;
   abloop: boolean;
   options: {
     autoplay: boolean;
@@ -40,15 +40,17 @@ export default function VideoViewer({
   const [metadata, setMetadata] = useState<Metadata | null>(null);
 
   useEffect(() => {
-    options.sources.forEach((source) => {
-      if (typeof _metadata === "object") {
-        setMetadata(_metadata);
-      } else {
-        _metadata(source.src).then((res) => {
-          setMetadata(res);
-        });
-      }
-    });
+    if (_metadata) {
+      options.sources.forEach((source) => {
+        if (typeof _metadata === "object") {
+          setMetadata(_metadata);
+        } else {
+          _metadata(source.src).then((res) => {
+            setMetadata(res);
+          });
+        }
+      });
+    }
   }, []);
 
   useEffect(() => {
