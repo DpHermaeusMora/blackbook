@@ -114,7 +114,7 @@ export default function VideoViewer({
           <div
             data-vjs-player
             ref={videoRef}
-            className={options.fill ? "fill" : ""}
+            className={options.fill ? "w-full h-full" : ""}
           />
         </div>
       ) : (
