@@ -83,7 +83,7 @@ td {
   }
 }
 
-.vjs-box__horizontal > div {
+.vjs-box__horizontal > video-js {
   width: 100%;
   height: 100%;
 }
@@ -98,7 +98,7 @@ td {
   }
 }
 
-.vjs-box__vertical > div {
+.vjs-box__vertical > video-js {
   width: 100%;
   height: 100%;
 }

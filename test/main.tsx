@@ -28,7 +28,7 @@ const videoOptions = {
   abloop: false,
   autoplay: false,
   controls: true,
-  fill: true,
+  fill: false,
   metadata: {
     width: 640,
     height: 360,
