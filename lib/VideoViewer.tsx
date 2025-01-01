@@ -9,7 +9,6 @@ export interface Metadata {
 }
 
 export interface Props {
-  containerClassName?: string;
   metadata?: ((src: string) => Promise<Metadata>) | Metadata;
   abloop: boolean;
   options: {
@@ -33,7 +32,6 @@ export default function VideoViewer({
   options,
   onReady,
   metadata: _metadata,
-  containerClassName,
 }: Props) {
   const videoRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<Player | null>(null);
