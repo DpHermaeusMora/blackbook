@@ -109,7 +109,11 @@ export default function VideoViewer({
               : `vjs-box__vertical`
           }
         >
-          <div data-vjs-player ref={videoRef} />
+          <div
+            data-vjs-player
+            ref={videoRef}
+            className={options.fill ? "fill" : ""}
+          />
         </div>
       ) : (
         <div className="vjs-box__horizontal bg-black flex justify-center items-center">
