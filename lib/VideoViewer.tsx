@@ -101,35 +101,27 @@ export default function VideoViewer({
     };
   }, [playerRef, metadata]);
 
-  return (
+  return options.fill ? (
+    <div data-vjs-player className="fill w-full h-full">
+      <div ref={videoRef} className="fill w-full h-full" />
+    </div>
+  ) : metadata ? (
     <div
-      className={`pt-8 pb-8 ${containerClassName || ""} ${
-        options.fill ? "w-full h-full" : ""
-      }`}
+      className={
+        metadata
+          ? metadata.width >= metadata.height
+            ? `vjs-box__horizontal`
+            : `vjs-box__vertical`
+          : `vjs-box__horizontal`
+      }
     >
-      {metadata ? (
-        <div
-          className={
-            options.fill
-              ? "w-full h-full"
-              : metadata.width >= metadata.height
-              ? `vjs-box__horizontal`
-              : `vjs-box__vertical`
-          }
-        >
-          <div
-            data-vjs-player
-            ref={videoRef}
-            className={options.fill ? "w-full h-full" : ""}
-          />
-        </div>
-      ) : (
-        <div className="vjs-box__horizontal bg-black flex justify-center items-center">
-          <span className="prose text-white font-bold text-xl mr-2">
-            encoding video...
-          </span>
-        </div>
-      )}
+      <div data-vjs-player ref={videoRef} />
+    </div>
+  ) : (
+    <div className="vjs-box__horizontal bg-black flex justify-center items-center">
+      <span className="prose text-white font-bold text-xl mr-2">
+        encoding video...
+      </span>
     </div>
   );
 }
