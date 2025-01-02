@@ -97,7 +97,7 @@ export default function VideoViewer({
         videojs.log("player is deleted");
       }
     };
-  }, [playerRef, metadata]);
+  }, [playerRef]);
 
   return options.fill ? (
     <div data-vjs-player className="fill w-full h-full">
