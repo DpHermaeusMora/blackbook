@@ -33,8 +33,8 @@ export default function Viewer(props: Props) {
       prose-img:mb-0
       prose-img:pt-8
       prose-img:pb-8
-      
-    prose-blockquote:border-l-primary-300
+      prose-pre:!bg-black
+      prose-blockquote:border-l
       prose-code:before:hidden  
       prose-p:after:hidden
       prose-p:before:hidden
@@ -42,9 +42,7 @@ export default function Viewer(props: Props) {
       prose-code:after:hidden
       prose-code:tag
       prose-a:no-underline
-      prose-a:text-primary-400
       prose-a:font-bold
-      prose-pre:text-gray-700
       prose-pre:inline-block
       prose-pre:w-full
       prose-pre:!mt-5

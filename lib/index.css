@@ -42,6 +42,14 @@
   width: 200px;
 } */
 
+.prose {
+  color: currentColor;
+}
+
+.prose * {
+  color: currentColor;
+}
+
 .prose pre {
   overflow-x: auto;
   overflow-y: visible;
@@ -61,6 +69,10 @@ td {
   border: 1px solid #a2a9b1;
   width: 100px;
   overflow: hidden;
+}
+
+.prose a {
+  text-decoration: underline;
 }
 
 .vjs-box__horizontal {

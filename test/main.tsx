@@ -22,6 +22,7 @@ $|A|=\sqrt{a_{1}{}^2+a_{2}{}^2+\cdots+a_{n}{}^2}$
 \`\`\`python
 print("hi")
 \`\`\`
+[안녕하세요]()
 `;
 
 const videoOptions = {
